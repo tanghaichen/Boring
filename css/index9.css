@@ -1,0 +1,109 @@
+
+  .mainsecond{
+  	width: 1170px;
+  	padding-top:80px;
+  	height:;
+  	margin:0 auto;
+  	display: flex;
+  	justify-content: space-around;
+  }
+  .mainsecond>li{
+  	opacity: .9;
+  	width: 555px;
+
+  }
+  .mainsecond>li>p{
+  	opacity: 0;
+  	font-size:14px;
+  margin:20px 0 35px 0;
+   }
+   .mainsecond h2{
+   	opacity: 0;
+    color:#444;
+   }
+     .mainsecond form{
+     	margin-top:-30px;
+     }
+  .mainsecond form>input{
+  	opacity: 0;
+  	display: block;
+  	width: 66%;
+  	height: 40px;
+  	/*font-weight: bold;*/
+  	padding-left: 15px;
+  	margin-bottom: 18px;
+  }
+
+    .mainsecond form>textarea{
+    	opacity: 0;
+    	width: 100%;
+    	/*font-weight: bold;*/
+  	padding-left: 15px;
+  	padding-top: 10px;
+  	margin-bottom: 18px;
+    }
+    .mainsecond form>button{
+    	opacity: 0;
+    	width: 110px;height: 40px;
+    	background: #02bdd5;
+    	text-decoration: center;
+    	line-height: 40px;
+    	border:none;
+    	color:white;
+    	border-radius: 5px;
+    	cursor: pointer;
+    	margin-top: 15px;
+    	margin-bottom: 160px;
+    }
+.mainsecond form>div{
+  opacity: 0;
+}
+.mainsecond form>div>select{
+  width: 120px;
+  height: 33px;
+  /*color:gray;*/
+    margin-bottom: 18px;
+}
+
+.mainsecond form span{
+  float:right;
+  /*transform: translateY(100px);*/
+  margin-top: 36px;
+  transform: translateX(10px);
+}
+.mainsecond h3{
+  opacity: 0;
+  margin-top: -5px;
+}
+.mainsecond video{
+  margin-top: -25px;
+  opacity: 0;
+  width: 600px;
+}
+
+
+
+
+
+ .mainthird{
+  	width: 1200px;
+  	margin:0 auto -100px;
+  	margin-left: 20px;
+  	display: flex;
+  	justify-content: space-around;
+  }
+  .mainthird>li{
+  	width: 260px;
+  	height: 200px;
+  	opacity: 0;
+  	text-align: center;
+
+  	background: #f7f7f7;
+  }
+   .mainthird>li>div{
+   	width: 50px;height: 50px;
+   	margin:30px auto 20px;
+   }
+   .mainthird>li>div img{
+    width: 90%;
+   }
