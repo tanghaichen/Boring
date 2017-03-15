@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+*{margin: 0;
+padding: 0;
+	-webkit-user-select:none;}
+ol,ul{list-style: none;}
+	html{
+		font-size: 32px;
+	}
+	ul{
+		width: 50rem;
+		height: 5rem;
+		margin:0 auto;
+		/*position: relative;*/
+	}
+	div{
+		width: 10rem;
+		height: 5rem;
+		overflow: hidden;
+		/*border:3px solid black;*/
+	}
+	li{
+		/*position: absolute;*/
+		float:left;
+		width: 10rem;
+		height: 5rem;
+	}
+	.aa1{
+		background: red;
+	}
+	.aa2{
+		background: yellow;
+	}
+	.aa3{
+		background: blue;
+	}
+	.aa4{
+		background: green;
+	}
+	.aa5{
+		background: black;
+	}
+	p{
+
+		margin-top: 2rem;
+		text-align: center;
+		/*transform-origin: 50% 50%;*/
+	}
+</style>
+</head>
+<body>
+<div>
+	<ul>
+		<li class="aa1">1</li>
+		<li class="aa2">2</li>
+		<li class="aa3">3</li>
+		<li class="aa4">4</li>
+		<li class="aa1">1</li>
+	</ul>
+	</div>
+	<p></p>
+</body>
+<script src="js/zepto-master/src/zepto.js"></script>
+<script src="js/zepto-master/src/event.js"></script>
+<script src="js/zepto-master/src/fx.js"></script>
+<script src="js/zepto-master/src/touch.js"></script>
+<script>
+var num=0;
+	setInterval(function(){
+		num--;
+      $('li').animate({'transform':'translateX('+(10*num)+'rem)'},1000,function(){
+      	// $('ul>li:nth-child(1)').clone().appendTo('ul').css('opacity',1);
+      	if (num===-4) {
+      		num=0;
+      		$('li').css({'transform':'translateX(0)'});
+      	}
+      	// $('ul>li:nth-child(1)').remove();
+      })
+	},2000)
+
+	$(document).doubleTap(function(){
+		$('p').html('双击完成')
+	});
+	$(document).tap(function(){
+		$('p').html('点击完成')
+	});
+	$('ul').longTap(function(){
+		$('ul').css({
+			'height':'16rem',
+			'transition':'all 3s'
+		})
+	});
+	$(document).swipeLeft(function(){
+		// console.log(1)
+		$('p').html('左滑动')
+		$('li').css({
+			'padding-left':'5rem'
+		})
+	})
+	$(document).swipeRight(function(){
+		// console.log(1)
+		$('p').html('右滑动')
+		$('li').css({
+			'padding-right':'5rem'
+		})
+	});
+var i=0;
+	$(document).longTap(function(){
+		i++;
+		var deg=360*i
+			$('p').css({
+			'transform':'rotate('+deg+'deg)',
+			'transition':'all 2s'
+		})
+	})
+ document.addEventListener('gesturestart', function(event) {
+        event.preventDefault();
+    }, false);
+</script>
+</html>
